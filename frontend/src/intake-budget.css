@@ -1,0 +1,40 @@
+.budget-layout { display: grid; grid-template-columns: minmax(0,1fr) 290px; gap: 22px; align-items: start; }
+.budget-items-panel.MuiPaper-root { padding: 26px; }
+.budget-panel-heading { display: flex; justify-content: space-between; align-items: start; gap: 16px; margin-bottom: 22px; }
+.budget-empty { padding: 34px 18px; margin-bottom: 20px; border: 1px dashed #cee0dc; border-radius: 15px; text-align: center; background: #f9fcfb; }
+.budget-empty > span { display: grid; place-items: center; width: 62px; height: 62px; border-radius: 18px; color: #528c81; background: #e9f3ef; margin: 0 auto 18px; }
+.budget-empty p { max-width: 330px; margin: 8px auto 0; line-height: 1.7; }
+.budget-stock-note { display: flex; gap: 8px; align-items: center; margin-top: 15px; color: #7a8e8b; font-size: 11px; line-height: 1.5; }
+.budget-stock-note svg { flex-shrink: 0; }
+.budget-summary.MuiPaper-root { padding: 24px; background: #f9fcfb; }
+.budget-summary-eyebrow { color: #547b73; font-size: 10px; font-weight: 800; letter-spacing: .09em; }
+.budget-summary-line { display: flex; justify-content: space-between; color: #627973; font-size: 13px; margin: 25px 0 22px; }
+.budget-summary-line strong { color: #294b45; }
+.budget-grand-total { padding: 23px 0; display: flex; flex-direction: column; gap: 6px; }
+.budget-grand-total span { color: #55736d; font-size: 12px; }
+.budget-grand-total strong { color: #08675f; font-size: 32px; font-weight: 800; letter-spacing: -.04em; }
+.budget-items { margin-bottom: 20px; }
+.budget-item { display: flex; align-items: start; gap: 13px; padding: 20px 0; border-top: 1px solid #e8efed; }
+.budget-item:last-child { border-bottom: 1px solid #e8efed; }
+.budget-item-icon { flex-shrink: 0; width: 38px; height: 38px; border-radius: 11px; display: grid; place-items: center; color: #428e7c; background: #eaf5ef; }
+.budget-item-icon.is-piece { color: #6586a6; background: #eef3f9; }
+.budget-item-description { min-width: 0; flex: 1; }
+.budget-item-type { color: #83938f; display: block; font-size: 9px; font-weight: 800; letter-spacing: .08em; margin-bottom: 4px; }
+.budget-item-description strong { display: block; font-size: 14px; overflow-wrap: anywhere; }
+.budget-item-description > span:last-of-type { color: #7b8e88; font-size: 12px; display: block; margin: 6px 0; }
+.budget-item-total { flex-shrink: 0; font-size: 14px; margin-top: 16px; white-space: nowrap; }
+.budget-item-actions { display: flex; gap: 14px; margin-top: 10px; }
+.budget-item-actions button { border: 0; padding: 0; background: transparent; color: #087e83; font: 650 11px 'Segoe UI',sans-serif; cursor: pointer; }
+.budget-item-actions button:last-child { color: #b07b7a; }
+.budget-catalog { max-height: 300px; overflow: auto; margin: 18px 0; }
+.budget-catalog-item { display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; text-align: left; padding: 16px 12px; background: white; border: 0; border-bottom: 1px solid #e8efed; border-radius: 8px; cursor: pointer; font-family: inherit; }
+.budget-catalog-item:hover { background: #eef8f4; }
+.budget-catalog-item:focus-visible { outline: 2px solid #087e83; outline-offset: -2px; }
+.budget-catalog-copy { min-width: 0; }
+.budget-catalog-copy strong { display: block; color: #2d4641; font-size: 14px; overflow-wrap: anywhere; }
+.budget-catalog-copy small { display: block; color: #8a9994; font-size: 11px; margin-top: 5px; }
+.budget-catalog-price { display: flex; align-items: center; gap: 15px; color: #167b69; font-weight: 750; font-size: 13px; flex-shrink: 0; }
+.budget-catalog-empty { text-align: center; color: #81948d; font-size: 13px; padding: 20px 0; }
+.budget-item-preview { display: flex; justify-content: space-between; padding: 17px; background: #edf7f2; color: #207765; border-radius: 12px; font-size: 14px; }
+@media (max-width: 1050px) { .budget-layout { grid-template-columns: 1fr; } .budget-summary.MuiPaper-root { padding: 24px; } }
+@media (max-width: 600px) { .budget-items-panel.MuiPaper-root { padding: 18px; } .budget-panel-heading { gap: 8px; } .budget-item { gap: 9px; } .budget-item-icon { display: none; } .budget-item-total { font-size: 12px; } .budget-catalog-item { gap: 10px; } }

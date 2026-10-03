@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: portcell
+      POSTGRES_USER: portcell
+      POSTGRES_PASSWORD: ${PORTCELL_DB_PASSWORD:?Defina PORTCELL_DB_PASSWORD}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - portcell-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U portcell -d portcell"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  portcell-postgres:
